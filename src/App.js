@@ -12,9 +12,10 @@ function App() {
     foodTypes[obj.category] = obj.category;
   });
   foodTypes = Object.values(foodTypes);
-  foodTypes.unshift("all");
+  const all = "all";
+  foodTypes.unshift(all);
   const selectCatefory = (foodName) => {
-    if (foodName == "all") {
+    if (foodName == all) {
       setSpecificFoods(data);
       return;
     }
